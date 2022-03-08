@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.Wrapper {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(218, 23%, 16%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.adviceNumber {
+	color: hsl(150, 100%, 66%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.adviceText {
+	margin: 0;
+	margin-bottom: 32px;
+	font-size: 28px;
+	color: hsl(193, 38%, 86%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.AdviceCard {
+	max-width: 450px;
+	margin: 0 24px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 16px;
+	text-align: center;
+	background-color: hsl(217, 19%, 24%);
 }
-
-.App-link {
-  color: #61dafb;
+.RandomAdviceButton {
+	margin-top: 32px;
+	margin-bottom: -50px;
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	border-radius: 100px;
+	background-color: hsl(150, 100%, 66%);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.RandomAdviceButton:hover {
+	cursor: pointer;
+}
+.loadContainer {
+	animation: rotating 1s linear infinite;
+}
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+.spinner {
+	transition: transform 200ms;
 }
